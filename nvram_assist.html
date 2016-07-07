@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<script src="myscripts.js" type="text/javascript"></script>
+    <title>NVRAM Assister (AHRS-8/GEDC-6E/DC-4E)</title>
+	<link rel="stylesheet" type="text/css" href="reset.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+<div id="container">
+
+	<!-- header -->
+	<header id="header">
+		<h1 id="title">NVRAM Assister</h1>
+	</header>
+
+
+	<!-- Navigation -->
+	<nav id="menu" class="clearfix">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="script_assister.html">AHRS-M1 Script Assister</a></li>
+			<li><a href="nvram_assist.html">NVRAM Assister (8/6E/4E)</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="mailto:richardswheatley@hotmail.com?Subject=Hello%20again">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main Content area -->
+	<section id="content">
+		<h2>NorthTek to NVRAM creator</h2><br/>
+		<p>This configurator takes the NorthTek script
+		and modifies it to be placed in NVRAM on the AHRS-8, GEDC-6E, and the DC-4E<br/><br/>
+		Key things to note here are:<br/>
+		* 60 max characters per line<br/>
+		* There is a userOpen and userClose<br/>
+		* The address for user space is 0x10000<br/>
+		* "put" is actually a NorthTek 'word' or function that enables us to place
+		more characters per line
+	</p>
+
+		<p>The AHRS-8, GEDC-6E, DC-4E, and the AHRS-M2 all have an seperate EEPROM chip
+            that holds the contents of NorthTek scripts to be sent to the processor upon power-up.
+            This is the space we call NVRAM. This NVRAM space only holds the ASCII version of the script.
+            The script will be sent tot he FORTH stack upon pwoer-up and will compiled at run-time.
+            The larger the script, the longer it will take to wake up the part. All of the current user
+            scripts are small enough that the time to first good reading will not be affected by a large script.
+		</p>
+
+	</section>
+
+	<!-- Sidebar -->
+	<aside  id="sidebar">
+		<h3>Your NorthTek script</h3>
+		<textarea id="inputTextArea" rows="25" cols="50">Enter your NorthTek script here...
+		</textarea>
+		<button type="button" onclick="myFunction()">Convert</button>
+	</aside>
+	<aside  id="Aside1">
+		<h3>This is the NVRAM script</h3>
+		<textarea readonly="readonly" id="outputTextArea" rows="25" cols="50">
+		</textarea>
+            <div contenteditable="true">Save Output to File</div>
+        <button onclick="saveTextAsFile()">Save Output to File</button>
+	</aside>
+
+	<!-- Navigation -->
+	<footer id="footer" class="clearfix">
+		Constructed by Richard Wheatley
+	</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<script src="myscripts.js" type="text/javascript"></script>
+	<title>Script Assister</title>
+	<link rel="stylesheet" type="text/css" href="reset.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+<div id="container">
+
+	<!-- header -->
+	<header id="header">
+		<h1 id="title">Script Assister</h1>
+	</header>
+
+
+	<!-- Navigation -->
+	<nav id="menu" class="clearfix">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="script_assister.html">AHRS-M1 Script Assister</a></li>
+			<li><a href="nvram_assist.html">NVRAM Assister (8/6E/4E)</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="mailto:richardswheatley@hotmail.com?Subject=Hello%20again">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main Content area -->
+	<section id="content">
+		<h2>AHRS-M1 Script Assister</h2><br/>
+		<p>This website was created as a part of a project for my classes. It is meant only to assist a user to be able to either configure a product using NorthTek, become familiar with NorthTek Forth Programming interface, or take a NorthTek script and create a comparable NVRAM script.<br/><br/>
+
+	</p>
+    <fieldset id="radios">
+        <div id="left" class="column">
+                <input type="radio" name="forth" onclick="check(this.value)" value="Do Loop"/>Do Loop<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="While Loop"/>While Loop<br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Math - Integer"/>Math - Integer<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Math - Float"/>Math - Float<br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Get Variable"/>Get Variable<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Get Array"/>Get Array<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Get Matrix"/>Get Matrix<br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Set Variable"/>Set Variable<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Set Array"/>Set Array<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Set Matrix"/>Set Matrix<br/>
+        </div>
+        <div id="space"></div>
+        <div id="right" class="column">
+                <input type="radio" name="forth" onclick="check(this.value)" value="mancal_3D"/>Manual Cal Script<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="autocal_3D"/>AutoCal Script<br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="nmea_checksum"/>NMEA Example w/ Checksum<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="nmea_no_checksum"/>NMEA String w/o Checksum<br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="compassp_mils_output_timed"/>compass.p Output in mils<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="simple_text_output"/>Simple Text Output<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="custom_binary_output"/>Custom Binary Output<br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="_"/>Example<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="_"/>Example<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="_"/>Example<br/>
+        </div>
+    </fieldset>
+
+	</section>
+
+	<!-- Sidebar -->
+	<aside  id="sidebar">
+		<h3>These are the Forth commands:</h3>
+		<textarea readonly="readonly" id="outputTextArea" rows="40" cols="50">
+		</textarea>
+	</aside>
+
+	<!-- Navigation -->
+	<footer id="footer" class="clearfix">
+		Constructed by Richard Wheatley
+	</footer>
+</div>
+</body>
+</html>

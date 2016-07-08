@@ -216,30 +216,3 @@ footer{
 #left{margin-left: -5px;}
 #right{margin-right: -5px;}
 #space{width: 10px;float: left;height: 20px;}
-
-.copied::after {
-  position: absolute;
-  top: 12%;
-  right: 110%;
-  display: block;
-  content: "copied";
-  font-size: 0.75em;
-  padding: 2px 3px;
-  color: #fff;
-  background-color: #22a;
-  border-radius: 3px;
-  opacity: 0;
-  will-change: opacity, transform;
-  animation: showcopied 1.5s ease;
-}
-
-/*
-@media all and (max-width : 330px) {
-
-	nav ul li {
-		display:block;
-		width: 94%;
-	}
-
-}
-*/

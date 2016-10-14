@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<script src="myscripts.js" type="text/javascript"></script>
+	<title>Script Assister</title>
+	<link rel="stylesheet" type="text/css" href="reset.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+<div id="container">
+
+	<!-- header -->
+	<header id="header">
+		<h1 id="title">Script Assister</h1>
+	</header>
+
+
+	<!-- Navigation -->
+	<nav id="menu" class="clearfix">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="ahrs_m1_m2_script_assister.html">AHRS-M1 Script Assister</a></li>
+			<li><a href="ahrs_m2_bitstream_assister.html">AHRS-M2 BitStream Assister</a></li>
+			<li><a href="nvram_assist.html">NVRAM Assister (8/6E/4E)</a></li>
+			<li><a href="mailto:richardswheatley@hotmail.com?Subject=Hello%20again">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- Main Content area -->
+	<section id="content">
+		<h2>AHRS-M1/M2 Script Assister</h2><br/>
+		<p>This website was created as a part of a project for my classes. It is meant only to assist a user to be able to either configure a product using NorthTek, become familiar with NorthTek Forth Programming interface, or take a NorthTek script and create a comparable NVRAM script.<br/><br/>
+
+	</p>
+    <fieldset id="radios">
+        <div id="left" class="column">
+                <input type="radio" name="forth" onclick="check(this.value)" value="Do Loop" id="radio_do"/>
+                <label for="radio_do">Do Loop</label><br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="While Loop" id="radio_while"/>
+                <label for="radio_while">While Loop</label><br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Math - Integer" id="radio_math_integer"/>
+                <label for="radio_math_integer">Math - Integer</label><br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Math - Float" id="radio_math_float"/>
+                <label for="radio_math_float">Math - Float</label><br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Get Variable" id="radio_get_variable"/>
+                <label for="radio_get_variable">Get Variable</label><br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Get Array" id="radio_get_array"/>
+                <label for="radio_get_array">Get Array</label><br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Get Matrix" id="radio_get_matrix"/>
+                <label for="radio_get_matrix">Get Matrix</label><br/>
+                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Set Variable"/>Set Variable<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Set Array"/>Set Array<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="Set Matrix"/>Set Matrix<br/>
+        </div>
+        <div id="space"></div>
+        <div id="right" class="column">
+				<input type="radio" name="forth" onclick="check(this.value)" value="mancal_3D" id="radio_manCal"/>
+                <label for="radio_manCal">Manual Cal Script</label><br/>
+
+				<input type="radio" name="forth" onclick="check(this.value)" value="autocal_3D" id="radio_autoCal"/>
+                <label for="radio_autoCal">AdaptCal Script</label><br/><br/>
+
+				<input type="radio" name="forth" onclick="check(this.value)" value="nmea_checksum" id="radio_nmeaChecksum"/>
+                <label for="radio_nmeaChecksum">NMEA Example w/ Checksum</label><br/>
+
+				<input type="radio" name="forth" onclick="check(this.value)" value="nmea_no_checksum" id="radio_nmeaNoChecksum"/>
+                <label for="radio_nmeaNoChecksum">NMEA String w/o Checksum</label><br/><br/>
+
+				<input type="radio" name="forth" onclick="check(this.value)" value="compassp_mils_output_timed" id="radio_compassMils"/>
+                <label for="radio_compassMils">compass.p Output in mils</label><br/>
+
+				<input type="radio" name="forth" onclick="check(this.value)" value="simple_text_output" id="radio_simpleText"/>
+                <label for="radio_simpleText">Simple Text Output</label><br/>
+				
+				<input type="radio" name="forth" onclick="check(this.value)" value="custom_binary_output" id="radio_customBinary"/>
+                <label for="radio_customBinary">Custom Binary Output</label><br/>
+<!--                <br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="_"/>Example<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="_"/>Example<br/>
+                <input type="radio" name="forth" onclick="check(this.value)" value="_"/>Example<br/>-->
+        </div>
+    </fieldset>
+
+	</section>
+
+	<!-- Sidebar -->
+	<aside  id="sidebar">
+		<h3>These are the Forth commands:</h3>
+		<textarea readonly="readonly" id="outputTextArea" rows="40" cols="50">
+		</textarea><br />
+        <div contenteditable="false">Save Output to File</div><br />
+        <button onclick="saveTextAsFile()">Save Output to File</button>
+
+	</aside>
+
+	<!-- Navigation -->
+	<footer id="footer" class="clearfix">
+		Constructed by Richard Wheatley
+	</footer>
+</div>
+</body>
+</html>
